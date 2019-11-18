@@ -1,0 +1,66 @@
+# ArcadianMaggie
+
+FORMAT: see headers
+
+"Pub/Pub Sub/Priv":
+public             => restricted == OPEN, messageVis == ALL
+public subscribers => restricted == OPEN, messageVis != ALL
+private            => restricted == RESTRICTED
+not really reliable, probably fastest just to automate messageVis lookup for all groups in list.
+
+METHODOLOGY:
+manual (big group effort). keyword searches, old recommendation lists, word-of-mouth, etc
+
+# asdf
+
+FORMAT:
+< asdf> ok so the first number is 0: RESTRICTED and 1: OPEN, the second number is 0: SUBSCRIBERS, 1: ALL, 2: MODERATORS, 3: NOBODY
+< asdf> after the user count
+
+there should be a dated_groups.txt but i don't have it--301'd from transfer site, tapedrive/betamax should have a copy
+<@tapedrive> Thanks asdf. Just so I get it right, the columns are members, name, last activity?
+< asdf> yeah
+
+METHODOLOGY:
+<@markedL> how did asdf make your list?
+< asdf> I did that for up to 3 letters but then downloaded some dictionaries in different languages and searched for all the words
+
+# PurpleSym
+
+FORMAT:
+<@PurpleSym> It has: ["adult","desc","flagBits","groupId","groupUrl","intlCode","lastPosted","members","messageVis","name","nameWithHighlightedText","order","restricted","title"]
+
+-info is from a few years ago, -search is recent
+
+METHODOLOGY:
+<@PurpleSym> [...] For the discovery I’m basically brute-forcing the group search to get more than 500 results.
+<@PurpleSym> [...] Whenever search returns more than 500 results I add a letter to the search term and add it to the queue.
+
+# savegroups
+
+FORMAT:
+columns: timestamp, url
+
+METHODOLOGY:
+manual (google form at tinyurl.com/savegroups).
+
+# thuban
+
+FORMAT:
+columns: groupId, name, restricted, messageVis, members (, category id)
+
+country codes fall into the following groups by language:
+
+1 au ca in sg uk us
+2 ar e1 es mx
+3 br
+4 cf fr
+5 de
+6 hk
+7 it
+(404 ph)
+
+different scrapes in the same language have ~99% overlap
+
+METHODOLOGY:
+/dir/ api crawl (up to 509 random publicly-visible groups from every listed category)
