@@ -2,15 +2,9 @@ import os
 
 
 def process_file(filename: str):
-    items = set()
-    with open(filename, 'r') as f:
-        for line in f:
-            line = line.strip()
-            if len(line) == 0:
-                continue
-            items.add('group:' + line.split('\t')[1])
-    with open(filename + '.processed', 'w') as f:
-        f.write('\n'.join(sorted(items)))
+    with open(filename, 'r') as in_, open(filename + '.processed', 'w') as out:
+        items = {'group:' + l.split('\t')[1].strip() for l in in_}
+        out.write('\n'.join(sorted(items)))
 
 
 def main():
