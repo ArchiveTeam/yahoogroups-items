@@ -36,6 +36,14 @@ METHODOLOGY:
 <@PurpleSym> [...] For the discovery I’m basically brute-forcing the group search to get more than 500 results.
 <@PurpleSym> [...] Whenever search returns more than 500 results I add a letter to the search term and add it to the queue.
 
+# queenmab
+
+FORMAT:
+url only
+
+METHODOLOGY:
+manual. focus is on groups with photos/files content
+
 # savegroups
 
 FORMAT:
