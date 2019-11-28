@@ -21,7 +21,6 @@ def main(filepaths: typing.Union[str, typing.List[str]]):
             added |= items
         os.rename(filepath, os.path.join('ADDED_RAW', filename))
 
-
 if __name__ == '__main__':
     if len(sys.argv) < 2:
         raise ValueError('Please give list as argument.')
