@@ -1,0 +1,9 @@
+group:
+group:def
+group:f_out.write('\n'.join(sorted(items)))
+group:for
+group:if
+group:import
+group:items
+group:main()
+group:with
